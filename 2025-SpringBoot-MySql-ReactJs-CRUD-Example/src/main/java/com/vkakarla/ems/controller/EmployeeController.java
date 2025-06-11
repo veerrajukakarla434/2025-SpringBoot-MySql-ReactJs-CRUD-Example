@@ -44,15 +44,15 @@ public class EmployeeController {
 
 	@Operation(summary = "Get All Employees", description = "Get All Employees from the DataBase")
 	@GetMapping(value = "/")
-	public ResponseEntity<Object> createEmployee() {
+	public ResponseEntity<Object> getAllEmployees() {
 		return new ResponseEntity<Object>(employeeService.getAllEmployees(), HttpStatus.OK);
 	}
 
 	@Operation(summary = "Update Employees", description = "Update Employee into DataBases")
 	@PutMapping(value = "/{id}")
-	public ResponseEntity<Object> updateEmployee(@PathVariable Long id, @RequestBody EmployeeDto employee) {
+	public ResponseEntity<Object> updateEmployee( @RequestBody EmployeeDto employee) {
      
-		employeeService.updateEmployee(id,employee);
+		employeeService.updateEmployee(employee);
 		return new ResponseEntity<Object>("Successfully Updated", HttpStatus.OK);
 	}
 	

@@ -19,8 +19,7 @@ public class Employee implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id",  nullable = false, unique = true)
+	@Column(name = "id", nullable = false, unique = true)
 	private long id;
 	
 	@Column(name="first_name")
@@ -53,4 +52,9 @@ public class Employee implements Serializable {
 		this.lastName = lastName;
 	}
 
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + "]";
+	}
+	
 }

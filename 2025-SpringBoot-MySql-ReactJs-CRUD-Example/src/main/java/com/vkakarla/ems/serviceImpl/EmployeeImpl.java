@@ -37,12 +37,9 @@ public class EmployeeImpl implements EmployeeService {
 	}
 
 	@Override
-	public void updateEmployee(long id, EmployeeDto dto) {
+	public void updateEmployee(EmployeeDto dto) {
 
-		Employee employee = employeeRepository.findById(id).get();
-		employee.setFirstName(dto.getFirstName());
-		employee.setLastName(dto.getLastName());
-		
+		Employee employee = EmployeeMapper.mapToEmployee(dto);
 	    employeeRepository.save(employee);
 
 	}
