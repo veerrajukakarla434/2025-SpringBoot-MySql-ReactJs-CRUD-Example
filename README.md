@@ -234,6 +234,7 @@ const Employee = () => {
 export default Employee
 
 ```
+![image](https://github.com/user-attachments/assets/ec1e7d7e-4f3f-4bdb-ad2e-c0a6cbe51281)
 
 
 
