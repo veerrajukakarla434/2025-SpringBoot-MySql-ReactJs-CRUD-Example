@@ -50,7 +50,7 @@ public class EmployeeController {
 	}
 
 	@Operation(summary = "Update Employees", description = "Update Employee into DataBases")
-	@PutMapping(value = "/{id}")
+	@PutMapping(value = "/")
 	public ResponseEntity<Object> updateEmployee( @RequestBody EmployeeDto employee) {
      
 		employeeService.updateEmployee(employee);
